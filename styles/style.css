@@ -1,0 +1,226 @@
+/* google fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/* reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* utilities  */
+:root {
+  --primary-color: #562eff;
+  --secondary-color: #ed6b4f;
+  --start-color: #ffc014;
+  --author-color: #9f9f9f;
+  --bg-color: #e5e5e5;
+  --rateing-color: #a2a2a2;
+  --big-font-size: 1.5rem;
+  --big-font-width: 31.25rem;
+  --medum-font: 1.25rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+hr {
+  color: lightgray;
+}
+.top__container,
+.container {
+  width: 60%;
+}
+.container {
+  background-color: #ffff;
+
+  padding: 1.5em;
+  border-radius: 5px;
+}
+.title {
+  font-weight: 600;
+  font-size: var(--big-font-size);
+  color: var(--primary-color);
+  margin-bottom: 1.5em;
+}
+/* //////////////////////////////////////////////////////////////////////////////////// */
+
+/* ************** header section ************** */
+
+.top__section {
+  background-color: var(--primary-color);
+  max-height: 5.875rem;
+  height: inherit;
+}
+
+.top__container {
+  padding: 1.875em 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.logo__contain {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  max-width: 40px;
+  height: auto;
+}
+.logo img {
+  width: 100%;
+}
+.site__name {
+  margin-left: 1em;
+  color: #ffff;
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menu--item {
+  color: #ffff;
+}
+.menu--item:not(:last-child) {
+  margin-right: 1.5em;
+}
+.profile-img {
+  max-width: 51px;
+  height: auto;
+}
+
+/* ************** main section ************** */
+.main__section {
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* ===============first__section===================== */
+
+.first__section {
+  margin: 1.5em 0;
+}
+/* top__player_section */
+
+.top__players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.875em 0;
+  margin-bottom: 1.5em;
+}
+.player {
+  display: flex;
+  align-items: center;
+}
+.player--img {
+  max-width: 57px;
+}
+.player--name {
+  margin-left: 1em;
+}
+/* blogs section  */
+.top__blogs {
+  margin-top: 1.5em;
+}
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.625em 0;
+}
+.blog {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.blog--img {
+  width: 177px;
+}
+.blog--details {
+  margin-left: 1em;
+}
+.author {
+  color: var(--author-color);
+}
+
+.author--name {
+  color: var(--primary-color);
+}
+/* ===============Second__section===================== */
+/* Course__section */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.313em;
+}
+.course {
+  cursor: pointer;
+}
+
+.course--title {
+  font-weight: 500;
+  font-size: var(--big-font-size);
+}
+.course-teacher {
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+.course--info {
+  display: flex;
+  justify-content: space-between;
+}
+.info-times,
+.rateing {
+  display: inline-flex;
+  align-items: center;
+}
+.info-times,
+.ri-time-line {
+  color: #ff4a60;
+}
+.info-times {
+  background-color: #ffe4e8;
+  border-radius: 0.9em;
+  padding: 2px;
+}
+
+.ri-star-s-fill,
+.ri-star-half-s-fill {
+  color: var(--start-color);
+}
+
+/* :::::::::::::::::::::: media Query ::::::::::::::::: */
+
+/* for mobile  */
+
+@media screen and (max-width: 576px) {
+  .top__container,
+  .container {
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .top__players,
+  .blogs,
+  .courses {
+    grid-template-columns: auto;
+  }
+  .blog {
+    flex-direction: column;
+  }
+  .top__container {
+    padding: 0;
+    gap: 1em;
+  }
+}
+/* for Laptop  */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
